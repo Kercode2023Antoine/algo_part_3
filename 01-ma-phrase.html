@@ -43,11 +43,11 @@
         <p class="text-success">Une alerte affichera le contenu de votre tableau d'analyse"</p>
     </div>
 
-    <label>Ma phase</label>
+    <label>Ma phrase</label>
     <br/>
     <input type="text" id="sentence" placeholder="Votre phrase"/>
 
-    <button type="button" class="btn btn-primary" onclick="analyse()">
+    <button type="button" class="btn btn-primary" onclick="analyze()">
         Analyser la phrase
     </button>
 </div>
@@ -56,6 +56,19 @@
 
     function analyze() {
         // CODE HERE !
+        let sentence = document.getElementById("sentence").value;
+        let myTab = [sentence.length, sentence.at(5), sentence.slice(0, 3), sentence.slice(-4, -1)];
+      
+        alert(myTab);
+        console.log(sentence.length);
+        console.log (sentence.at(5));
+        console.log(sentence.slice(0, 3));
+        console.log(sentence.slice(length -3, length));
+
+        return myTab;
+        
+
+
     }
 
 </script>
