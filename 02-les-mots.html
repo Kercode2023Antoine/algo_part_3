@@ -54,10 +54,42 @@
 <script type="text/javascript">
 
     function countWords() {
-        let sentence = document.getElementById("sentence").value
-        sentence = sentence.replaceAll(" ", "")
-        // CODE HERE ! 
-    }
+        let sentence = document.getElementById("sentence").value;
+        
+        let myTab;
+
+
+
+
+        /*
+        // capture de l'input texte
+        let sentence = document.getElementById("sentence").value;
+        //modification de la capture pour suppression des espaces
+        let words = sentence.trim().split(" ");
+        // création d'une nouvelle variable pour resultat ultérieur
+        let howMany = 0; 
+        // utilisation de la boucle for pour resultat
+        for ( let i=0; i < words.length ; i++) {
+            // implantation de howMany pour obtenir un resultat
+             howMany +=1
+        }
+        // Obtention de resultat
+        alert(howMany)
+        */
+
+
+
+
+        /*
+        // Capture de l'input texte
+        let sentence = document.getElementById("sentence").value;
+        // modification de la capture pour retirer les espaces.
+        let words = sentence.split(" ").length;
+        words = words.split
+        // affichage de l'alert 
+        alert(`la chaine se compose de ${words} caractéres`)
+        */
+      }
 
 </script>
 </body>
