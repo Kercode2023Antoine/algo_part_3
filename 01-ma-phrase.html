@@ -57,15 +57,21 @@
     function analyze() {
         // CODE HERE !
         let sentence = document.getElementById("sentence").value;
-        let myTab = [sentence.length, sentence.at(5), sentence.slice(0, 3), sentence.slice(-4, -1)];
-      
+        let myTab = [sentence.length, sentence.at(4), sentence.slice(0, 3), sentence.slice(length -3, length.max)];
+      if (sentence.length >= 5) {
         alert(myTab);
+        return myTab;
+      } else {
+        alert(myTab[0]);
+        return (myTab[0]);
+
+      }
         console.log(sentence.length);
         console.log (sentence.at(5));
         console.log(sentence.slice(0, 3));
-        console.log(sentence.slice(length -3, length));
+        console.log(sentence.slice(length -3, length.max));
 
-        return myTab;
+        
         
 
 
