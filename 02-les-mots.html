@@ -55,8 +55,18 @@
 
     function countWords() {
         let sentence = document.getElementById("sentence").value;
-        
-        let myTab;
+        let words = 0;
+        let separator = 0;
+
+        for (i=0; i < sentence.length; i++) {
+            if (sentence.charAt(i) === " ") {
+                ++separator
+                console.log(separator)
+            }else {
+
+            }
+        }
+
 
 
 
