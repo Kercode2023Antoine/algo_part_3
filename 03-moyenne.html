@@ -42,10 +42,34 @@
     const notes = [8.75, 14, 13, 5.5, 9, 17, 11.25];
 
     /*
-     * Ici le commentaire sur la fonction average...
+     * création d'une valeur "somme" et d'une valeur "moyenne"
+     * utilsation d'une boucle pour aditionner chaque notes
+     * dans sommes (parseFloat pour un format décimal)
+     * puis calcul de la moyenne
      */
 
     function average(noteArray) {
+        let sum = 0;
+        let notesAverage = 0;
+
+        notes.forEach(function (notes){
+            sum += Number.parseFloat(notes)
+        });        
+        notesAverage = sum / notes.length;
+        console.log(notesAverage.toFixed(2))
+        
+    /*   let sum = 0;
+     *   let notesAverage = 0;
+     *
+     *   for (let i = 0; i < notes.length; i++) {
+     *       sum += Number.parseFloat(notes[i]);
+     *   }
+     *
+     *   notesAverage = sum / notes.length
+     *
+     *   console.log(notesAverage.toFixed(2))
+    */
+
         // CODE HERE !
         
     }
