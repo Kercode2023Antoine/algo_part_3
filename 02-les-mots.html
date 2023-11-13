@@ -56,14 +56,16 @@
     function countWords() {
         // capture de l'input texte
         let sentence = document.getElementById("sentence").value;
+        sentence = sentence.replaceAll(/!|,|\?|;|\-|:|'/g, " " )
         let words = 0;
-        // words = nombre d'espaces +1 
+        
+        
         if (sentence.charAt(0) !==" ") {
             words++
         }
         // boucle comparant les caractéres 2 à 2 (espace détecté -> nouveau mot)
-        for (let i = 0; i <= sentence.length -1; i++) {
-            if (sentence.charAt(i) !== " " && sentence.charAt(i - 1) == " ")
+        for (let i = 1; i < sentence.length ; i++) {
+            if (sentence.charAt(i) !== " " && sentence.charAt(i - 1) === " " )
             words++
         }
         console.log(words)
