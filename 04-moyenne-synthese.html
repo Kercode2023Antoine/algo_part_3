@@ -80,8 +80,8 @@
 
         // notes de départ
         let notes = [8.75, 14, 13, 5.5];
-        
-        
+
+
 
         /*
          * La fonction "average" calcule la moyenne des notes contenues dans un tableau 
@@ -90,7 +90,7 @@
          * Retour : la moyenne calculée
          */
 
-         // création de ma fonction "moyenne" avec un paramétre "perso" 
+        // création de ma fonction "moyenne" avec un paramétre "perso" 
         function average(myNote) {
             let sum = 0;
             let notesAverage = 0;
@@ -103,26 +103,28 @@
             notesAverage = sum / myNote.length;
             //console.log(notesAverage.toFixed(2));
             return notesAverage.toFixed(2);
-
-
-
         }
-      
+        /*
+         * Fonction appelée lors du 'clic' sur le bouton
+         * Parameters: 
+         * Return:
+         */
+
         //Fonction d'ajout de note à la moyenne
-      
+
         function refreshAverage() {
             // capture de la nouvelle note dans l'imput
             let newNote = document.getElementById("note").value
             // transformation de la chaine en nombre
             newNote = parseFloat(newNote)
-           
+
             // condition : entre 0 et 20 inclut
-            if  (newNote >= 0 && newNote <= 20) {
+            if (newNote >= 0 && newNote <= 20) {
                 // si conditions remplie on ajoute la valeur au tableau
                 notes.push(newNote);
                 // On vérifie le tableau
                 console.log(notes)
-            // si condition non remplie : 
+                // si condition non remplie : 
             } else {
                 alert(`Veuillez saisir un chiffre entre 1 et 20 .`);
             }
@@ -132,22 +134,7 @@
             // average(notes); 
             // on utilise la fonction dans tool.js pour afficher le tableau dans une alerte
             displayArray(notes);
-            
-        
         }
-             
-        
-        /*
-         * Fonction appelée lors du 'clic' sur le bouton
-         * Parameters: 
-         * Return:
-         */
-
-        /* function refreshAverage() {
-             // CODE HERE !
-     
-         }
-     */
     </script>
 </body>
 
