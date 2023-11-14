@@ -98,7 +98,8 @@
             });
             notesAverage = sum / notes.length;
             console.log(notesAverage.toFixed(2))
-            return displayArray(notes);
+            
+            
 
         }
         /*
@@ -111,16 +112,17 @@
             let newNote = document.getElementById("note").value
 
             if (newNote === "") {
-                return average();
+                return (average() + displayArray(notes));
 
-            } else if (newNote >= 0 && newNote <= 20 ) {
+            } else if (newNote >= 0 && newNote <= 20) {
                 notes.push(newNote)
-                return average();
-                
+                return (average() + displayArray(notes))
+
             } else {
                 alert(`Veuillez saisir un chiffre entre 0 et 20 !`)
+                return displayArray(notes)
             }
-
+            
         }
         /*
          * Fonction appelée lors du 'clic' sur le bouton
